@@ -14,7 +14,10 @@ class Program
         QrReader Reader = new QrReader();
         IEnumerable<QrResult> qrResults = Reader.Read(Input);
         var res = qrResults.First().Value;
-        Console.WriteLine(res);
+        // проверка на существование результата
+        if (res is not null){
+            Console.WriteLine(res);
+        }
 
     }
 }
