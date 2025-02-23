@@ -1,0 +1,197 @@
+/* 1. Белый фон на весь экран */
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 2. Блок с изображением */
+.image-container {
+  width: 80%;
+  max-width: 700px;
+  background-image: url('gaiti.png');
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 3. Основной контент */
+.content-box {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: #F0816D;
+}
+
+/* Шрифты для разных языков */
+body.en-mode {
+  font-family: 'K2D', sans-serif; /* Английский */
+}
+
+body.ru-mode {
+  font-family: 'Montserrat Alternates', sans-serif; /* Русский */
+}
+
+/* Заголовок */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #F0816D;
+}
+
+/* Убираем стандартный input file */
+input[type="file"] {
+  display: none;
+}
+
+/* Кнопка выбора файла */
+.file-label {
+  display: inline-block;
+  background-image: url('button-bg.png');
+  background-size: cover;
+  padding: 20px;
+  width: 250px;
+  height: 70px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Текст на кнопке выбора файла */
+.file-label span {
+  font-family: 'K2D', sans-serif; /* Английский */
+  color: #F0816D;
+}
+
+/* Меняем шрифт в зависимости от языка */
+body.ru-mode .file-label span {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* Убираем дефолтный текст браузера (на всякий случай) */
+input[type="file"]::-webkit-file-upload-button {
+  display: none;
+}
+
+/* Кнопка SCAN QR */
+#scan-btn {
+  background-image: url('button-bg1.png');
+  background-size: cover;
+  width: 250px;
+  height: 70px;
+  padding: 12px 25px;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F0816D;
+}
+
+/* Принудительно добавляем шрифт для кнопки SCAN QR */
+body.en-mode #scan-btn {
+  font-family: 'K2D', sans-serif;
+}
+
+body.ru-mode #scan-btn {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#scan-btn:hover {
+  transform: scale(1.069);
+}
+
+/* Окно результата */
+.result-box {
+  background-color: #FFFAE6;
+  padding: 15px;
+  width: auto;
+  min-width: 250px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Кнопка RU/EN */
+#lang-btn {
+  background-image: url('ru.png');
+  background-size: cover;
+  width: 100px;
+  height: 40px;
+  padding: 5px 15px;
+  border: none;
+  font-size: 18px;
+  font-family: 'K2D', sans-serif;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#lang-btn:hover {
+  transform: scale(1.069);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .image-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .content-box {
+    padding: 20px;
+  }
+
+  .file-label {
+    width: 85%;
+    font-size: 20px;
+  }
+
+  #scan-btn {
+    width: 85%;
+    font-size: 20px;
+  }
+
+  .result-box {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  #lang-btn {
+    width: 80px;
+    height: 35px;
+    font-size: 16px;
+  }
+}

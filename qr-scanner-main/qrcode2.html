@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;700&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Черный фон -->
+    <div class="black-background">
+        <!-- Блок с изображением -->
+        <div class="image-container">
+            <!-- Основной контент (кнопки и т.д.) -->
+            <div class="content-box">
+                <h1 id="title">QR Scanner</h1>
+
+                <label for="file-input" class="file-label">
+                    <span id="insert-text">INSERT YOUR QR HERE</span>
+                    <input type="file" id="file-input" accept="image/*">
+                </label>
+
+                <p id="file-status">*File is not chosen</p>
+
+                <button id="scan-btn">SCAN QR</button>
+
+                <!-- Окно результата -->
+                <div class="result-box">
+                    <p id="result-text">The result will be displayed here</p>
+                </div>
+
+                <!-- Кнопка смены языка (теперь ниже результата) -->
+                <button id="lang-btn">RU</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
